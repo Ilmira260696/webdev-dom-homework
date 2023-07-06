@@ -17,6 +17,6 @@ export const getList = (comment, index)=>{
     </div>
   </li>`;
 }
-// export {getList};
+
 
  
