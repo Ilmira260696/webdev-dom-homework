@@ -8,7 +8,7 @@ import { format } from "date-fns";
 
 const commentsLoading = document.querySelector('.data-loading');
 let comments = [];
-// let token = null; 
+
 // const commentLoadingElement = document.querySelector('.comment-loading');    
 // appEl.innerHTML= 'Подождите, страница загружается!';
 
