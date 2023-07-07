@@ -3,12 +3,12 @@ import { getCurrentDate } from "./date.js";
 import { getList } from "./list.js";
 import renderApp from "./renderComments.js";
 import {getApp} from "./api.js";
-import { format } from "date-fns";
 // import { getList } from "./list.js";
+import { format } from "date-fns";
 
 const commentsLoading = document.querySelector('.data-loading');
 let comments = [];
-
+// let token = null; 
 // const commentLoadingElement = document.querySelector('.comment-loading');    
 // appEl.innerHTML= 'Подождите, страница загружается!';
 
@@ -17,7 +17,7 @@ let comments = [];
     const appComments = responseData.comments.map ((comment)=>{
     return {
           name:comment.author.name,
-          dateСreation: getCurrentDate(new Date(comment.date)),
+          dateСreation: format(new Date(comment.date), 'yyyy-MM-dd hh.mm.ss'),
           text: comment.text,
           likeComment: comment.isLiked,
           likesNumber: comment.likes,
